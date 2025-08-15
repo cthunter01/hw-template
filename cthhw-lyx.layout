@@ -20,8 +20,20 @@ EndPreamble
 
 TitleLatexName relax
 
+# These are things that aren't needed in the Homework layout
+
 NoStyle Part
+NoStyle Part*
 NoStyle Chapter
+NoStyle Chapter*
+NoStyle Subsubsection
+NoStyle Subsubsection*
+NoStyle Subsection
+NoStyle Subsection*
+NoStyle Section
+NoStyle Section*
+NoStyle Paragraph
+NoStyle Subparagraph
 
 Style Problem
   Category              Sectioning
@@ -37,18 +49,34 @@ Style Problem
   BottomSep		0.7            # Page top separation .7in in LyX
 
   Font
-   Series               Medium         # Non-bold on LyX input screen
-   Shape                Italic         # Italic   on LyX input screen
-   Size                 Normal         # Normal size on LyX input screen
+   Series               Bold         # Non-bold on LyX input screen
+   Size                 Large         # Normal size on LyX input screen
   EndFont
 End
 
-Style Bibliography
-	TopSep                4
-	LabelString           "Bibliography"
-	LabelFont
-	  Series              Bold
-	  Size                Huge
-	EndFont
-	TocLevel              0
+Style Solution
+  Category              Sectioning
+  LatexType             Command        # This is a command
+  LatexName             solution
+  KeepEmpty             1
+  LabelString           "Solution"
+  LabelType             Static
+  Font
+   Series               Bold         # Non-bold on LyX input screen
+   Size                 Large         # Large size on LyX input screen
+  EndFont
 End
+
+Style SolutionPart
+  Category              Sectioning
+  LatexType             Command        # This is a command
+  LatexName             part
+  KeepEmpty             1
+  LabelString           "Solution Part"
+  LabelType             Static
+  Font
+   Series               Medium         # Non-bold on LyX input screen
+   Size                 Large         # Large size on LyX input screen
+  EndFont
+End
+
