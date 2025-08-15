@@ -1,0 +1,54 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[cthhw]{Homework}
+#  \DeclareCategory{Reports}
+# Report textclass definition file. Taken from initial LyX source code
+# Author : Matthias Ettrich <ettrich@informatik.uni-tuebingen.de>
+# Transposed by Pascal André <andre@via.ecp.fr>
+# Heavily modifed and enhanced by serveral developers.
+
+Format 104
+Input stdclass.inc
+Input numreport.inc
+
+# Reports are allowed to have chapters, which implies that this must be 
+# a DocBook book.
+DocBookRoot		      book
+DocBookForceAbstract  true
+
+Preamble
+EndPreamble
+
+TitleLatexName relax
+
+NoStyle Part
+NoStyle Chapter
+
+Style Problem
+  Category              Sectioning
+  LatexType             Command        # This is a command
+  LatexName             problem
+  AlignPossible         Left           # ONLY left aligned in LyX input
+#  Align                 Left           # Left aligned in LyX input
+  LeftMargin		"MM"        # Left margin width of 5 'M's in LyX
+  RightMargin		"MM"        # Right margin width of 5 'M's in LyX
+  ParSkip		0.7            # Paragraph skip .7in in LyX
+  ParSep		0.7            # Paragraph separation .7in in LyX
+  TopSep		0.7            # Page top separation .7in in LyX
+  BottomSep		0.7            # Page top separation .7in in LyX
+
+  Font
+   Series               Medium         # Non-bold on LyX input screen
+   Shape                Italic         # Italic   on LyX input screen
+   Size                 Normal         # Normal size on LyX input screen
+  EndFont
+End
+
+Style Bibliography
+	TopSep                4
+	LabelString           "Bibliography"
+	LabelFont
+	  Series              Bold
+	  Size                Huge
+	EndFont
+	TocLevel              0
+End
