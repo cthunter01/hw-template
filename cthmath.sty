@@ -1,0 +1,60 @@
+%===========================================================================
+% cthmath.sty
+% Provide the cthmath package
+%===========================================================================
+
+
+%===========================================================================
+% Identification
+%===========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cthmath}[2025/08/15 Travis Hunter's Math Package]
+
+\RequirePackage{ifthen}
+\RequirePackage{xparse}
+\RequirePackage{calc}
+\RequirePackage{empheq}
+
+% some math packages
+\RequirePackage{amsthm}
+\RequirePackage{amsmath}
+\RequirePackage{xfrac}
+\RequirePackage{bm}
+
+%=====================================================
+% Basic Commands
+%=====================================================
+
+
+\newcommand{\bvec}[1]{\mathbf{#1}}  %Bold vectors
+\newcommand{\uvec}[1]{\hat{\mathbf{\bm #1} }} %Unit vectors
+\newcommand{\bR}{\mathbb{R}}        %Blackboard bold R
+% \newcommand{\vep}{\varepsilon}
+% \newcommand{\ep}{\epsilon}
+% \newcommand{\epz}{\epsilon_0}
+\newcommand{\calL}{\mathcal{L}}    %Caligraphic L
+\newcommand{\calD}{\mathcal{D}}    %Caligraphic D
+\newcommand{\calZ}{\mathcal{Z}}    %Caligraphic Z
+
+
+%%%%%%%%%Regular Derivatives%%%%%%%%%%%
+\newcommand{\rd}{\mathrm{d}} %the singular Regular Differential
+\newcommand{\rdf}[3][\!]{\frac{\rd^{#1} #2}{\rd #3^{#1}}} %Regular derivative
+\newcommand{\rdfb}[2][]{\frac{\rd^{#1}}{\rd #2^{#1}}}  %Regular
+                                %derivative No function is required
+                                %(Blank) 
+
+%%%%%%%%%Partial Derivatives%%p%%%%%%%%%
+\newcommand{\pd}{\partial} %the Partial Differential
+\newcommand{\pdf}[3][\!]{\frac{\pd^{#1} #2}{\pd #3^{#1}}} %Partial derivative
+\newcommand{\pdfb}[2][]{\frac{\pd^{#1}}{\pd #2^{#1}}} %Partial
+                                %derivative no function required (Blank)
+
+%%%%%%%%%Functional Derivatives%%%%%%%%
+\newcommand{\fd}{\delta\!} %Fixes spacing with garamond font
+\newcommand{\fdf}[3][\!]{\frac{\fd^{#1} #2}{\fd #3^{#1}}} %Functional
+                                %derivative 
+\newcommand{\fdfb}[2][]{\frac{\fd^{#1}}{\fd #2^{#1}}} % Functional
+                                % derivative, no function required
+                                % (Blank) 
+
